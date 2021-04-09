@@ -50,22 +50,20 @@ class Node:
     def depth_search(self, value):           
         if self._value == value:
             return self
-        elif:
-            depth_search(self._children[0], value)
-            depth_search(self._children[1], value)
-        else:
-            return None
+    
+        for child in self._children:
+            node = child.depth_search(value)
+            if node is not None:
+                return node
 
-        
+    def breadth_first(self, value):
+        queue = [self]
+        while queue:
+            node = queue.pop(0)
+            if node.value == value:
+                return node
+            queue.extend(node._children)
 
-
-
-        
-
-
-
-
- 
     def __repr__(self):
         # return f'<Node value: test, children: test>'
         return f'<Node value {self._value} children {self._children}>'
