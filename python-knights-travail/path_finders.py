@@ -1,9 +1,15 @@
-# from tree import Node
+from tree import Node
 
-# from new import a
+class KnightPathFinder:
+    def __init__(self, coordinates):
+        self._coordinates = coordinates
 
-import random
+    def find_path(self, destination):
+        path = []
+        paths_to_do = 
+        #no negative numbers
+        #if x, y  are negative, prompt move is not allowed
 
-print(random.random())
+        #if the numbers aren't negative, check if it's a valid move 
 
-
+        #if any paths in paths to do = destination. 
